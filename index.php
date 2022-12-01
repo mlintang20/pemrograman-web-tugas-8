@@ -6,52 +6,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Aplikasi CRUD Plus Upload Gambar dengan PHP</title>
 
+  <!-- CDN Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+  <style>
+    td, th {
+      border: 1.0px solid #fff;
+      padding: 8px;
+    }
+  </style>
 </head>
-<body>
-  <h1>Data Siswa</h1>
+<body class="bg-dark text-light">
+  <h1 class="text-center mt-3">Data Siswa</h1>
 
-  <button type="button">
-    <a href="form_simpan.php">Tambah Siswa</a>
-  </button>
-  <!-- <a href="form_simpan.php">Tambah Data</a><br><br> -->
-  <table border="1" width="100%">
-    <tr>
-      <th>Foto</th>
-      <th>NIS</th>
-      <th>Nama</th>
-      <th>Jenis Kelamin</th>
-      <th>Telepon</th>
-      <th>Alamat</th>
-      <th colspan="2">Aksi</th>
-    </tr>
+  <div class="d-flex flex-column justify-content-center mx-5">
 
-    <?php
-      // Load file connect.php
-      include "connect.php";
+    <nav>
+      <button type="button" class="btn btn-primary my-3">
+        <a href="form_simpan.php" class="text-light text-decoration-none">Tambah Siswa</a>
+      </button>
+    </nav>
+    
+    <table>
+      <tr>
+        <th class="text-center">Foto</th>
+        <th class="text-center">NIS</th>
+        <th class="text-center">Nama</th>
+        <th class="text-center">Jenis Kelamin</th>
+        <th class="text-center">Telepon</th>
+        <th class="text-center">Alamat</th>
+        <th class="text-center" colspan="2">Aksi</th>
+      </tr>
 
-      // Query untuk menampilkan data siswa
-      $sql = $pdo->prepare("SELECT * FROM siswa");
-      $sql->execute();
+      <?php
+        // Load file connect.php
+        include "connect.php";
 
-      while($data = $sql->fetch()){
-        echo "<tr>";
-        echo "<td><div><img src='images/".$data['foto']."' width='100' height='100'></div></td>";
-        echo "<td>".$data['nis']."</td>";
-        echo "<td>".$data['nama']."</td>";
-        echo "<td>".$data['jenis_kelamin']."</td>";
-        echo "<td>".$data['telp']."</td>";
-        echo "<td>".$data['alamat']."</td>";
-        
-        echo "<td>";
-        echo "<div>";
-        echo "<button><a href='form_ubah.php?id=".$data['id']."'>Edit</a></button>";
-        echo "<button><a href='proses_hapus.php?id=".$data['id']."'>Hapus</a></button>";
-        echo "</div>";
-        echo "</td>";
-        
-        echo "</tr>";
-      }
-    ?>
-  </table>
+        // Query untuk menampilkan data siswa
+        $sql = $pdo->prepare("SELECT * FROM siswa");
+        $sql->execute();
+
+        while($data = $sql->fetch()){
+          echo "<tr>";
+          echo "<td class='text-center'><div class='text-center'><img src='images/".$data['foto']."' width='100' height='100'></div></td>";
+          echo "<td class='text-center'>".$data['nis']."</td>";
+          echo "<td class='text-center'>".$data['nama']."</td>";
+          echo "<td class='text-center'>".$data['jenis_kelamin']."</td>";
+          echo "<td class='text-center'>".$data['telp']."</td>";
+          echo "<td class='text-center'>".$data['alamat']."</td>";
+          
+          echo "<td class='text-center'>";
+          echo "<div class='btn-group' role='group'>";
+          echo "<button type='button' class='btn btn-warning'><a href='form_ubah.php?id=".$data['id']."' class='text-dark text-decoration-none'>Edit</a></button>";
+          echo "<button type='button' class='btn btn-danger'><a onClick=\"javascript: return confirm('Hapus data ini?');\" href='proses_hapus.php?id=".$data['id']."' class='text-light text-decoration-none'>Hapus</a></button>";
+          echo "</div>";
+          echo "</td>";
+          
+          echo "</tr>";
+        }
+      ?>
+    </table>
+
+  </div>
 </body>
 </html>
