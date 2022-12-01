@@ -45,10 +45,10 @@
           <?php
           if($data['jenis_kelamin'] == "Laki-laki"){
             echo "<input type='radio' name='jenis_kelamin' value='Laki-laki' checked='checked'>Laki-laki";
-            echo "<input type='radio' name='jenis_kelamin' value='perempuan'>Perempuan";
+            echo "<input type='radio' name='jenis_kelamin' value='Perempuan'>Perempuan";
           } else {
             echo "<input type='radio' name='jenis_kelamin' value='Laki-laki'>Laki-laki";
-            echo "<input type='radio' name='jenis_kelamin' value='perempuan' checked='checked'>Perempuan";
+            echo "<input type='radio' name='jenis_kelamin' value='Perempuan' checked='checked'>Perempuan";
           }
           ?>
           </td>
