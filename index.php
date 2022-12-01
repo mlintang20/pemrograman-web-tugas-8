@@ -58,7 +58,7 @@
           echo "<td class='text-center'>";
           echo "<div class='btn-group' role='group'>";
           echo "<button type='button' class='btn btn-warning'><a href='form_ubah.php?id=".$data['id']."' class='text-dark text-decoration-none'>Edit</a></button>";
-          echo "<button type='button' class='btn btn-danger'><a onClick=\"javascript: return confirm('Hapus data ini?');\" href='proses_hapus.php?id=".$data['id']."' class='text-light text-decoration-none'>Hapus</a></button>";
+          echo "<button type='button' class='btn btn-danger'><a onClick=\"javascript: return confirm('Hapus data ".$data['nama']."?');\" href='proses_hapus.php?id=".$data['id']."' class='text-light text-decoration-none'>Hapus</a></button>";
           echo "</div>";
           echo "</td>";
           
