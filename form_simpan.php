@@ -10,8 +10,15 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
 
   <style>
+    header {
+      color: #19CD54;
+    }
     fieldset {
       box-shadow: 4px -4px 8px green, -4px 4px 8px green, 4px 4px 8px green, -4px -4px 8px green;
+      color: #19CD54;
+    }
+    input, textarea {
+      border-radius: 15px;
     }
   </style>
 </head>

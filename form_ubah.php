@@ -8,6 +8,19 @@
 
   <!-- CDN Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+  <style>
+    header {
+      color: #FFC107;
+    }
+    fieldset {
+      box-shadow: 4px -4px 8px #FFC107, -4px 4px 8px #FFC107, 4px 4px 8px #FFC107, -4px -4px 8px #FFC107;
+      color: #FFC107;
+    }
+    input, textarea {
+      border-radius: 15px;
+    }
+  </style>
 </head>
 <body class="bg-dark text-light">
   <header>
@@ -29,7 +42,7 @@
   ?>
 
   <form method="POST" action="proses_ubah.php?id=<?php echo $id; ?>" enctype="multipart/form-data" class="d-flex justify-content-center mt-5">
-    <fieldset class="p-4 border border-3 border-secondary rounded">
+    <fieldset class="p-4 rounded">
       <table cellpadding="10">
         <tr>
           <td>NIS</td>
