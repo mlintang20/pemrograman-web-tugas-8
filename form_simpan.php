@@ -8,6 +8,12 @@
 
   <!-- CDN Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css">
+
+  <style>
+    fieldset {
+      box-shadow: 4px -4px 8px green, -4px 4px 8px green, 4px 4px 8px green, -4px -4px 8px green;
+    }
+  </style>
 </head>
 <body class="bg-dark text-light">
   <header>
@@ -15,7 +21,7 @@
   </header>
 
   <form method="POST" action="proses_simpan.php" enctype="multipart/form-data" class="d-flex justify-content-center mt-5">
-    <fieldset class="p-4 border border-3 border-secondary rounded"> 
+    <fieldset class="p-4 rounded"> 
       <table cellpadding="10">
         <tr>
           <td>NIS</td>
