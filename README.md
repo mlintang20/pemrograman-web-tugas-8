@@ -14,7 +14,7 @@
 
 #### Halaman index
 
-<div>Halaman index adalah halaman utama website yang berisi list siswa yang sudah terdaftar. File yang terkait adalah file ```index.php```</div>
+##### Halaman index adalah halaman utama website yang berisi list siswa yang sudah terdaftar. File yang terkait adalah file `connect.php` dan `index.php`
 
 ![Screenshot 2022-12-03 105620](https://user-images.githubusercontent.com/90432657/205422006-d273d122-7e08-45a8-9061-45c2228e9658.png)
 
